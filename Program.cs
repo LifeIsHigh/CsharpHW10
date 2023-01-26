@@ -6,8 +6,19 @@
 
 Console.Write("Enter a value: ");
 long Value = Convert.ToInt64(Console.ReadLine());
-for (int i = 1; i <= Value; i++)
+if (Value > 0)
 {
-    double CubicValue = Math.Pow(i, 3);
-    Console.Write($"{CubicValue}, ");
+    for (int i = 1; i <= Value; i++)
+    {
+        double CubicValue = Math.Pow(i, 3);
+        Console.Write($"{CubicValue}, ");
+    }
+}
+else
+{
+    for (int i = -1; i >= Value; i--)
+    {
+        double CubicValue = Math.Pow(i, 3);
+        Console.Write($"{CubicValue}, ");
+    }
 }
